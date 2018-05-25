@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,5 +21,9 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func loginPressed(_ sender: Any) {
+        let messageListScreen = self.storyboard?.instantiateViewController(withIdentifier: "messageList")
+        self.present(messageListScreen!, animated: true, completion: nil)
+    }
 }
 
